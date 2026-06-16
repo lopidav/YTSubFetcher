@@ -1,4 +1,4 @@
-// Requested format order with srt included
+
 const formats = ['srv3', 'json3', 'srt', 'vtt', 'srv1', 'srv2', 'ttml'];
 const container = document.getElementById('container');
 
@@ -25,7 +25,6 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         
         const videoId = urlObj.searchParams.get('v') || 'video';
         
-        // Map fmt string to standard file extensions
         let extension = fmt;
         if (fmt === 'json3') extension = 'json';
         if (fmt === 'srv3' || fmt === 'srv2' || fmt === 'srv1') extension = 'xml';
