@@ -27,7 +27,8 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         
         let extension = fmt;
         if (fmt === 'json3') extension = 'json';
-        if (fmt === 'srv3' || fmt === 'srv2' || fmt === 'srv1') extension = 'xml';
+        if (fmt === 'srv3') extension = 'ytt';
+        if (fmt === 'srv2' || fmt === 'srv1') extension = 'xml';
 
         chrome.downloads.download({
           url: urlObj.toString(),
